@@ -11,4 +11,10 @@ https://code.visualstudio.com/docs/cpp/config-mingw
 Для роботи вам потрібно MinGW з 64-бітною підтримкою, та ***рекомендується*** завантажити VulkanSDK, для перевірки підтримки vulkan на вашому пристрої, після цих дій, завантажте .zip архів з усім вмістом, натиснувши на кнопку "\<Code>" у правому верньому куту репозиторія, після чого натисніть Download ZIP Archive.
 
 # English variant
-
+# Information
+This is simple game endgine with open code for using, the name is - HEAT
+# Functions
+**This is unfinished project which currently in development** Now you can only create a window and example of Vulcan, this engine using C programming language, also in plans operate Lua for better control model of big lists and replacing classes, and Rust for autification and network usage
+# Usage
+https://code.visualstudio.com/docs/cpp/config-mingw
+For a work you need MinGW with 64-bit support, and ***recommended** download VulkanSDK for checking supporting vulkan on your device and after those movements, download .zip archive with all contents by pressing "\<Code>" button on ritght-up angle of repository, then press Download ZIP Archive
