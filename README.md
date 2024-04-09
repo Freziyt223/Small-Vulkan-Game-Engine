@@ -1,4 +1,3 @@
-<title>Game dev site</title>
 # Ukrainian variant
 - [English Variant](#english-variant)
 ## Зміст
