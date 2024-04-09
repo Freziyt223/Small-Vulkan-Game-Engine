@@ -16,6 +16,4 @@ This is a simple game engine with open code for using, the name is - HEAT
 # Functions
 **This is unfinished project which currently in development** Now you can only create a window and example of Vulcan, this engine is using C programming language, also in plans operate Lua for better control model of big lists and replacing classes, and Rust for autification and network usage
 # Usage
-https://code.visualstudio.com/docs/cpp/config-mingw
-For a work you need <a href="https://code.visualstudio.com/docs/cpp/config-mingw
-" target="_blank">MinGW</a> with 64-bit support, and ***recommended** download VulkanSDK for checking supporting vulkan on your device and after these movements, download .zip archive with all contents by pressing "\<Code>" button in the upper right corner angle of repository, then press Download ZIP Archive
+For a work you need <a href="https://code.visualstudio.com/docs/cpp/config-mingw" target="_blank">MinGW</a> with 64-bit support, and ***recommended** download VulkanSDK for checking supporting vulkan on your device and after these movements, download .zip archive with all contents by pressing "\<Code>" button in the upper right corner angle of repository, then press Download ZIP Archive
