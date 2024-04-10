@@ -1,7 +1,6 @@
 # Ukrainian variant
 - [English Variant](#english-variant)
-<button>wthisthis</button>
-
+<button><p>wthisthis</p></button>
 ## Зміст
 ![Engine Logo](/icon.png)
 # Інформація
