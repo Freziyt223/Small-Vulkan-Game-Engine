@@ -1,4 +1,4 @@
-<font color =red><title>HEAT Engine</title></font>
+<font color =red><p>HEAT Engine</p></font>
 # Ukrainian variant
 - [English Variant](#english-variant)
 ## Зміст
