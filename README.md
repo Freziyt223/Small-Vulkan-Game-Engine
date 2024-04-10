@@ -1,5 +1,5 @@
+<title>HEAT Engine</title>
 # Ukrainian variant
-
 - [English Variant](#english-variant)
 ## Зміст
 ![Engine Logo](/icon.png)
