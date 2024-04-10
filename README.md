@@ -1,5 +1,5 @@
 # Ukrainian variant
-- [English Variant](#english-variant)
+- [<button>English Variant</button>](#english-variant)
 ## Зміст
 ![Engine Logo](/icon.png)
 # Інформація
