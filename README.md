@@ -1,6 +1,11 @@
 # Ukrainian variant
 - [English Variant](#english-variant)
-<button><p>wthisthis</p></button>
+<style>
+  .en-but{
+    color = red;
+  }
+</style>
+<button class = "en-but"><p>English Variant</p></button>
 ## Зміст
 ![Engine Logo](/icon.png)
 # Інформація
