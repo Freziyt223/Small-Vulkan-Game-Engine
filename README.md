@@ -1,6 +1,6 @@
-# Ukrainian variant
-- [English Variant](#english-variant)
 ## Зміст
+<p>Ukrainian Variant
+- [English Variant](#english-variant)</p>
 <center>
     <p>HEAT Engine</p>
     <img src="https://freziyt223.github.io/Simple-Vulkan-Game-Engine/icon.png" alt="Example Image">
