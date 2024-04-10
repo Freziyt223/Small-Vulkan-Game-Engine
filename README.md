@@ -1,7 +1,7 @@
 ## Зміст
 - [English Variant](#english-variant)
 <center>
-    <p style="font-size:15px"><b>HEAT Engine</b></p>
+    <p style="font-size:45px"><b>HEAT Engine</b></p>
     <img src="https://freziyt223.github.io/Simple-Vulkan-Game-Engine/icon.png" alt="Example Image">
 </center>
 # Інформація
