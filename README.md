@@ -2,9 +2,9 @@
 - [English Variant](#english-variant)
 ## Зміст
 <center>
-  <p>HEAT Engine</p>
+    <p>HEAT Engine</p>
+    <img src="https://freziyt223.github.io/Simple-Vulkan-Game-Engine/icon.png" alt="Example Image">
 </center>
-![Engine Logo](/icon.png)
 # Інформація
 Це доволі простий ігровий двигун з відкритим для використання кодом, назва - HEAT
 # Функції
