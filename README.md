@@ -1,7 +1,9 @@
 # Ukrainian variant
 - [English Variant](#english-variant)
 ## Зміст
-<p>HEAT Engine</p>
+<center>
+  <p>HEAT Engine</p>
+</center>
 ![Engine Logo](/icon.png)
 # Інформація
 Це доволі простий ігровий двигун з відкритим для використання кодом, назва - HEAT
