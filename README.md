@@ -20,3 +20,7 @@ This is a simple game engine with open code for using, the name is - HEAT
 # Usage
 For a work you need  <a href="https://code.visualstudio.com/docs/cpp/config-mingw"
 target="_blank">MinGW</a> with 64-bit support, and ***recommended** download VulkanSDK for checking supporting vulkan on your device and after these movements, download .zip archive with all contents by pressing "\<Code>" button in the upper right corner angle of repository, then press Download ZIP Archive
+
+<a href="https://code.visualstudio.com/docs/cpp/config-mingw#_prerequisites">
+    <img src="https://manual.uberspace.de/_images/logo_gcc.png" width="110" height="130" class="img">
+</a>
