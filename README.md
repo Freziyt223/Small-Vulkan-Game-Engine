@@ -25,6 +25,10 @@ target="_blank">MinGW</a> with 64-bit support, and ***recommended** download Vul
 <a href="https://code.visualstudio.com/docs/cpp/config-mingw#_prerequisites" target="_blank">
     <img src="GCC2.png" class="gcc">
 </a>
-<head> <title>"somethinf"</title> </head>
-<body> <p1> Hello <p1/></body>
-<img>
+
+<head> 
+<title>"somethinf"</title> 
+</head>
+<body> 
+<p> More information -- Tap the buttons</p>
+</body>
