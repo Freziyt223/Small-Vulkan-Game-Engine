@@ -26,9 +26,10 @@ target="_blank">MinGW</a> with 64-bit support, and ***recommended** download Vul
     <img src="GCC2.png" class="gcc">
 </a>
 
+<link rel="stylesheet" href="text.html">
 <head> 
-<title>"somethinf"</title> 
+    <title>HEAT Engine</title> 
 </head>
 <body bgcolor="red"> 
-<p> More information -- Tap the buttons</p>
+    <p> More information -- Tap the buttons</p>
 </body>
