@@ -29,6 +29,6 @@ target="_blank">MinGW</a> with 64-bit support, and ***recommended** download Vul
 <head> 
 <title>"somethinf"</title> 
 </head>
-<body> 
+<body bgcolor="red"> 
 <p> More information -- Tap the buttons</p>
 </body>
