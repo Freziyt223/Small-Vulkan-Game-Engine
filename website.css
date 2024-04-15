@@ -1,14 +1,40 @@
+    .title {
+        font-size:50px;
+        color: grey;
+        font-family: "Georgia"
+    }
+
     .gcc{
         width: 90px;
         height: 35px;
         border-radius: 8px;
+
     }
 
     .gcc:hover{
         cursor:pointer;
-        transform: scale(1.2)
+        transform: scale(1.2);
     }
 
     .gcc:active{
         transform: scale(1)
+    }
+
+    .information {
+        text-align: center;
+        font-family: "Comfortaa";
+        color:rgb(196, 196, 196);
+    }
+
+    .texts {
+        padding-left: 220px;
+        font-size: 17px;
+        color: #ffffea; 
+    }
+
+    .en {
+        font-size: 40px;
+        text-align: center;
+        font-family: "Comfortaa";
+        color:rgb(196, 196, 196);    
     }
