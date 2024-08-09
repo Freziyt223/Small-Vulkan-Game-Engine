@@ -1,0 +1,18 @@
+{
+  "configurations": [
+  {
+    "name": "Test",
+    "type": "cppdbg",
+    "request": "launch",
+    "program" : "${workspaceRoot}\\Compiled\\HEAT.exe",
+    "args": ["-help"],
+    "stopAtEntry": false,
+    "cwd": "${workspaceRoot}",
+    "environment": [],
+    "externalConsole": false,
+    "MIMode": "gdb",
+    "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
+    "preLaunchTask": "Build and assemble the project"
+  }
+  ]
+}
