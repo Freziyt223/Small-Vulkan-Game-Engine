@@ -2,7 +2,6 @@
 // Includes and defines
 
 #include "Array.h"
-#include "../Program/Defines.h"
 
 // ------------------------------------------------------------------------------------------------------------------------
 // Functions and variables that will be used futher in program
@@ -12,7 +11,7 @@
  * @param NumberOfElements enter number of elements in the array
  * @returns Array type(check at the ./Array.h file) 
  * */ 
-Array ArrayCreate(long long NumberOfElements) {
+Array ArrayCreate(size_t NumberOfElements) {
 
   Array Header = {.Size = 8 * NumberOfElements}; // Making an empty array 
   Header.LongInteger = calloc(NumberOfElements, 8); // Allocating memory for our array
@@ -57,8 +56,8 @@ void *SmallArrayCreate(int SizeOfElement, size_t NumberOfElements) {
   return Array;
 }
 
-void SmallArrayResize(void *Array, size_t NewSize) {
-  Array = realloc(Array, NewSize);
+void SmallArrayResize(void **Array, size_t NewSize) {
+  *Array = realloc(*Array, NewSize);
 }
 
 void SmallArrayDestroy(void *Array) {

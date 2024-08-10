@@ -2,6 +2,7 @@
 // Here we include other files
 
 #include "../Platform/Platform.h"
+#include "../Dynamic Execution/Program include.h"
 
 // ------------------------------------------------------------------------------------------------------------------------
 // Those are the structs that whole program will use as the container
@@ -31,7 +32,11 @@ struct Program {
  * Function that initializes all program features for startup
  * Takes no arguments and doesn't return
  */
-void InitializeProgram() {
+void InitializeProgram(char *args[]) {
+  if (InitializeIncludes(args)) {
+    printf("Some error occur when trying to initialize includes");
+  }
+  return;
   InitializePlatform();
 }
 /**

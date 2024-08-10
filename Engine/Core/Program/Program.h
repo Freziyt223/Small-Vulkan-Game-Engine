@@ -3,6 +3,7 @@
 
 #include "../Platform/Platform.h"
 #include "Defines.h"
+
 // ------------------------------------------------------------------------------------------------------------------------
 // In this section we declare variables that will be used later in all the program
 
@@ -23,7 +24,7 @@ extern struct Program {
 // ------------------------------------------------------------------------------------------------------------------------
 // Functions to controll program
 
-void InitializeProgram();
+void InitializeProgram(char *args[]);
 void UpdateProgram();
 void TerminateProgram();
 

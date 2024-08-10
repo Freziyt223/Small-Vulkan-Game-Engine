@@ -8,7 +8,6 @@
 // but that wouldn't have been a good one to read and understand, so everything is split up into multiple files.
 
 #include "Core/Program/Program.h"
-#include "Core/DynamicArrays/Array.h"
 
 // ------------------------------------------------------------------------------------------------------------------------
 // File structure is as follows:
@@ -18,7 +17,7 @@
 // ------------------------------------------------------------------------------------------------------------------------
 // Main function, that is the entry point of the program, where program begins to execute.
 int main(int argc, char* argv[]) { // argc and argv are the arguments passed to the program from command line
-  InitializeProgram();
+  InitializeProgram(argv);
   UpdateProgram();
   TerminateProgram();
 

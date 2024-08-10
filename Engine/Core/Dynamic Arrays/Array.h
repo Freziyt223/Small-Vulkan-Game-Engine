@@ -13,7 +13,7 @@ typedef struct Array {
     double *LongFloat;
     int *Integer;
     float *Float;
-    char *String;
+    const char **String;
     bool *Boolean;
   };
 
@@ -27,6 +27,8 @@ void ArrayResize(Array *Array, size_t NewSize);
 
 #define SmallArray(Type, Size) (Type *)SmallArrayCreate(sizeof(Type), Size)
 
-void SmallArrayResize(void *Array, size_t NewSize);
+void SmallArrayResize(void **Array, size_t NewSize);
 
 void SmallArrayDestroy(void *Array);
+
+void *SmallArrayCreate(int SizeOfElement, size_t NumberOfElements);

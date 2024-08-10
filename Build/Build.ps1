@@ -124,7 +124,7 @@ $ProjectDirectory = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyComma
 #   Function that will gather all the given data and compile the project
 function Compile {
     $Files = GetFiles
-    clang -g -Werror -std=c99 $Files.SourceFiles -o "$ProjectDirectory\Compiled\HEAT$ExecutableExtension" 
+    clang -g -Werror -std=c99 $Files.SourceFiles -o "Compiled\Heat$ExecutableExtension"
 }
 
 # ------------------------------------------------------------------------------------
