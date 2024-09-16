@@ -2,6 +2,7 @@
 // In this section we include other files
 
 #include "../Platform/Platform.h"
+#include "../Events/Events.h"
 #include "Defines.h"
 
 // ------------------------------------------------------------------------------------------------------------------------

@@ -19,7 +19,7 @@ Array ArrayCreate(size_t NumberOfElements) {
     printf("Failed to allocate memory for dynamic array"); // Tell about it in a console
     return (Array){
       .Size = 0,
-      .Boolean = 0
+      .Boolean = NULL
     }; // And Return empty Array
   }
 
@@ -31,13 +31,13 @@ Array ArrayCreate(size_t NumberOfElements) {
  * @returns Nothing
  */
 void ArrayDestroy(Array *Array) {
-  if(Array->Size == 0) { // Size is always not zero when creating Array, so when it's opposite, Array isn't valid
+  if((*Array).Size == 0) { // Size is always not zero when creating Array, so when it's opposite, Array isn't valid
     printf("Array is empty or non existing"); // Tell about it in a console
     return; // End execution of this function
   }
-  free(Array->LongInteger); // If Array is valid, clean up it's constituents,
-  Array->LongInteger = NULL; // make so data inside of the Array can not be longer used, to prevent accidental and undefined behaviour
-  Array->Size = 0; // Setting Array size to 0 so Array becomes "empty"
+  free((*Array).Boolean); // If Array is valid, clean up it's constituents,
+  (*Array).Boolean = NULL; // make so data inside of the Array can not be longer used, to prevent accidental and undefined behaviour
+  (*Array).Size = 0; // Setting Array size to 0 so Array becomes "empty"
 };
 
 /**

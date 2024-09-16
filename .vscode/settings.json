@@ -3,5 +3,7 @@
         "events.h": "c",
         "defines.h": "c",
         "stdio.h": "c",
+        "array.h": "c",
+        "program.h": "c"
     }
 }

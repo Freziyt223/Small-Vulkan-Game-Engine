@@ -1,15 +1,19 @@
 {
+  "version": "2.0.0",
   "tasks": [
     {
       "type": "shell",
-      "group": "build",
-      "label" : "Build and assemble the project",
-      "command" : "${workspaceFolder}\\Build\\Build.ps1",
-      "args" : [],
-      "options" : {
-        "cwd" : "${workspaceFolder}"
-      }
+      "label": "Build and assemble the project",
+      "command": "${workspaceFolder}/Build/Build.ps1",
+      "args": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
     }
-  ],
-  "version": "2.0.0"
+  ]
 }

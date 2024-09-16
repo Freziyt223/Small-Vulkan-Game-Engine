@@ -3,6 +3,8 @@
 
 #include "../Platform/Platform.h"
 #include "../Dynamic Execution/Program include.h"
+#include "../Events/Events.h"
+#include "Defines.h"
 
 // ------------------------------------------------------------------------------------------------------------------------
 // Those are the structs that whole program will use as the container
@@ -33,11 +35,10 @@ struct Program {
  * Takes no arguments and doesn't return
  */
 void InitializeProgram(char *args[]) {
-  if (InitializeIncludes(args)) {
-    printf("Some error occur when trying to initialize includes");
-  }
-  return;
+  InitializeEvents();
+  InitializeIncludes(args);
   InitializePlatform();
+  UserInitialize();
 }
 /**
  * Function updates program many many times and plays/checks for events
@@ -45,7 +46,7 @@ void InitializeProgram(char *args[]) {
  */
 void UpdateProgram() {
   while (UpdatePlatform() == 1) {
-
+    UserUpdate();
   };
 }
 /**
@@ -53,6 +54,10 @@ void UpdateProgram() {
  * Takes no arguments and doesn't return
  */
 void TerminateProgram() {
+  InitializeEvents();
   TerminatePlatform();
+  UserTerminate();
+  TerminateIncludes();
+  remove("./Application.dll");
 }
 // ------------------------------------------------------------------------------------------------------------------------
