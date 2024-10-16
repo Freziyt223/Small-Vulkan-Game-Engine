@@ -34,7 +34,16 @@ You should use header file provided by the engine, to use functions already impl
 
 # Redistribution
 As i mentioned earlier, you can modify engine to make it work on yor system, you add yourself to the authors, but please keep me there:), also you can post your modifications online, users may like it and so i may,
-you can add new license for your project and other stuff 
+you can add new license for your project and other stuff, also you can make working executable without help of an engine executor(A.K.A Heat.exe) you can compile your program files with Core.dll and some C file with main fucnction, example is engine's ./Engine/Heat engine.c 
+```c
+#include "Core/Program/Program.h"
+int main(int argc, char* argv[]) { // argc and argv are the arguments passed to the program from command line
+  InitializeProgram(argc, argv);
+  UpdateProgram();
+  TerminateProgram();
+};
+```
+You can also mark these functions like extern and not use ./Engine/Core/Program/Program.h header file
 # Contribution
 You can add issues/forks on this, write me a message for contribution request (for now no socials). Also i do need someone to showcase features of this program as i don't have much time, if you can please write me a letter
 
