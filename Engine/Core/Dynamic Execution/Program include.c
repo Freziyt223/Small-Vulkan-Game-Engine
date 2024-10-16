@@ -52,18 +52,26 @@ int GetDirrectory(const char *Dirrectory, char **Files) {
 }
 
 int CompileFiles(char *Files) {
-  size_t commandSize = 41 + strlen(Files);
+  char *MyCommand = "clang -shared -o ./Compiled/Application.dll -I./Engine/Core -L./Compiled -lCore ";
+  size_t commandSize = strlen(MyCommand) + strlen(Files) + 1; // +1 для '\0'
+  
   char *Command = SmallArray(char, commandSize);
-  strcpy(Command, "clang -shared -o Application.dll ");
+
+  strcpy(Command, MyCommand);
+
   strcat(Command, Files);
+
   int Code = system(Command);
+
   SmallArrayDestroy((void *)Command);
-  return Code == 0;
+    
+  return Code;
 }
 
 void LoadFiles() {
-  Dll = LoadLibraryA("Application.dll");
-  if (Dll == NULL) {
+  Dll = LoadLibraryA("./Compiled/Application.dll");
+  
+  if (Dll != NULL) {
     UserInitialize = (FunctionType)GetProcAddress(Dll, "Initialize");
     UserUpdate = (FunctionType)GetProcAddress(Dll, "Update");
     UserTerminate = (FunctionType)GetProcAddress(Dll, "Terminate");
@@ -80,29 +88,30 @@ void LoadFiles() {
   }
 }
 
-int InitializeIncludes(char *args[]) {
+int InitializeIncludes(int argc, char *args[]) {
   char *Files = SmallArray(char, 1);
   Files[0] = '\0';
   if (args[1] != NULL) {
+
     const char *Extension = strrchr(args[1], '.');
     if (Extension == NULL) {
-      if (GetDirrectory(args[1], &Files)) {
-        if (!CompileFiles(Files)) {
-          return 1;
-        }
+
+      if (GetDirrectory(args[1], &Files) != 1) {
+        CompileFiles(Files);
       }
+
     } else {
       AddFile(&Files, args[1]);
-      if (!CompileFiles(Files)) {
-        return 1;
-      }
+      CompileFiles(Files);
     }
+
   };
+  
   LoadFiles();
   SmallArrayDestroy((void *)Files);
   return 0;
 }
 
 void TerminateIncludes() {
-  FreeLibrary(Dll);
+  if (Dll != NULL) {FreeLibrary(Dll);}
 };

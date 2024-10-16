@@ -20,16 +20,16 @@
    * @returns Default windows procedure code, check windows api tutorial
    * */ 
   LRESULT ProcessWindowEvents(HWND Window, UINT MessageCode, WPARAM WParameter, LPARAM LParameter) {
+    static bool HasFocus = true;
     switch(MessageCode) {
-      case WM_ERASEBKGND: 
-      // Our program will handle erasing background and not default window manager
-        return 1; 
+      case WM_KILLFOCUS:
+        HasFocus = false;
+      case WM_LBUTTONDOWN:
+        TriggerEvent("Key Pressed", (Array){.Size = 1, .String = &(char *){"LMB"}});
       case WM_CLOSE:
-        return 0;
+        StopExecuting(0);
       case WM_DESTROY:
         PostQuitMessage(0);
-        return 0;
-      
     }
     return DefWindowProcA(Window, MessageCode, WParameter, LParameter);
   }
@@ -101,7 +101,6 @@
     if(!(Program.Window.Handle = Platform.Window)) {return;}
     // Checking if any error occured
     
-    ShowWindow(Program.Window.Handle, SW_SHOW); // Showing the window
     UpdateWindow(Program.Window.Handle); // Updating the window
   };
 
@@ -112,6 +111,8 @@
   void TerminatePlatform() {
     // Terminating the window
     if(Program.Window.Handle != NULL) {
+      int Shown = IsWindow(Program.Window.Handle);
+      Program.Window.IsShown = false;
       DestroyWindow(Program.Window.Handle);
       Program.Window.Handle = NULL;
     }
@@ -120,14 +121,14 @@
    * Function that will check for update from audio, window, key manager
    * @returns True or False if the process was successful
    */
-  char UpdatePlatform() {
+  int UpdatePlatform() {
     MSG Message;
     while(PeekMessageA(&Message, NULL, 0, 0, PM_REMOVE)) { // Peek message, and if there is any, then process it
+      if (Program.Window.IsShown) {ShowWindow(Program.Window.Handle, SW_SHOW);}
       TranslateMessage(&Message);
       DispatchMessageA(&Message);
-
     }
-    return 1;
+    return 0;
   };
 #endif
 

@@ -14,8 +14,8 @@
 Array ArrayCreate(size_t NumberOfElements) {
 
   Array Header = {.Size = 8 * NumberOfElements}; // Making an empty array 
-  Header.LongInteger = calloc(NumberOfElements, 8); // Allocating memory for our array
-  if (Header.LongInteger == NULL) { // If it wasn't successfull
+  Header.Boolean = calloc(NumberOfElements, 8); // Allocating memory for our array
+  if (Header.Boolean == NULL) { // If it wasn't successfull
     printf("Failed to allocate memory for dynamic array"); // Tell about it in a console
     return (Array){
       .Size = 0,

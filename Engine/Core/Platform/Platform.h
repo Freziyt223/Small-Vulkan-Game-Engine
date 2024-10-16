@@ -66,5 +66,5 @@
 
 void InitializePlatform();
 void TerminatePlatform();
-char UpdatePlatform();
+int UpdatePlatform();
 // ------------------------------------------------------------------------------------------------------------------------

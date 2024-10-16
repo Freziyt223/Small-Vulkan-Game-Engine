@@ -15,7 +15,7 @@ typedef struct Array {
     double *LongFloat;
     int *Integer;
     float *Float;
-    const char **String;
+    char **String;
     bool *Boolean;
   };
 

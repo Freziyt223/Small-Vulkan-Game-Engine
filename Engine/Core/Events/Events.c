@@ -30,7 +30,7 @@ int InitializeEvents() {
 };
 
 void TerminateEvents() {
-  SmallArrayDestroy(Events.Event);
+  if (Events.Event != NULL) {SmallArrayDestroy(Events.Event);}
 };
 
 int RegisterEvent(const char *Name) {

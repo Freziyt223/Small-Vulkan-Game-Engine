@@ -4,6 +4,7 @@
         "defines.h": "c",
         "stdio.h": "c",
         "array.h": "c",
-        "program.h": "c"
+        "program.h": "c",
+        "stdbool.h": "c"
     }
 }

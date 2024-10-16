@@ -9,9 +9,10 @@
 // In this section we declare variables that will be used later in all the program
 
 typedef struct {
-  const char *Title;
+  char *Title;
   int X, Y, Width, Height;
   WindowType Handle;
+  bool IsShown;
 } Window;
 
 // ------------------------------------------------------------------------------------------------------------------------
@@ -19,14 +20,18 @@ typedef struct {
 
 extern struct Program {
   Window Window;
-  const char *Name;
+  char *Name;
+  struct UserMouse {
+    int X, Y;
+  } Mouse;
 } Program;
 
 // ------------------------------------------------------------------------------------------------------------------------
 // Functions to controll program
 
-void InitializeProgram(char *args[]);
+void InitializeProgram(int argc, char *args[]);
 void UpdateProgram();
 void TerminateProgram();
+void StopExecuting(int Code);
 
 // ------------------------------------------------------------------------------------------------------------------------
